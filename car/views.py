@@ -15,7 +15,7 @@ class BrandView(generics.ListAPIView):
 
 class BrandDetail(viewsets.ModelViewSet):
     def get(self, request, pk):
-        dsffffsdfgf = Brand.objects.all()
+        dsffffsdfgff = Brand.objects.all()
         data = get_object_or_404(Brand, pk=pk)
         serializer = BrandSerializer(data)
         return Response(serializer.data)
