@@ -7,6 +7,7 @@ from rest_framework import generics
 from car.models import Brand
 from rest_framework import viewsets
 
+
 class BrandView(generics.ListAPIView):
     queryset = Brand.objects.all()
     serializer_class = BrandSerializer
@@ -14,10 +15,7 @@ class BrandView(generics.ListAPIView):
 
 class BrandDetail(viewsets.ModelViewSet):
     def get(self, request, pk):
+        dsffffsdfgffg = Brand.objects.all()
         data = get_object_or_404(Brand, pk=pk)
         serializer = BrandSerializer(data)
         return Response(serializer.data)
-
-
-
-
